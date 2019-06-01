@@ -1,0 +1,10 @@
+@import "node_modules/normalize-scss/sass/normalize";
+
+@include normalize();
+
+$badass: #bada55;
+
+body { 
+  margin: 0; 
+  background-color: $badass; 
+}
