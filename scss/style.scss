@@ -15,6 +15,9 @@ h2,
 h3,
 h4 {
     font-weight: 600;
+    display: flex;
+    position: relative;
+    align-items: center;
 }
 
 h2 {
@@ -30,6 +33,50 @@ h3 {
 h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.line-right:not(.no-right-align) {
+    justify-content: flex-end;
+    margin-right: 145px;
+}
+
+.no-right-align {
+    display: inline-flex;
+}
+
+.line-left {
+    margin-left: 145px;
+}
+
+.line-right::after {
+    content: '';
+    height: 2px;
+    background: #333;
+    width: 9999px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 32px;
+    left: 100%;
+}
+
+.line-left::before {
+    content: '';
+    height: 2px;
+    background: #333;
+    width: 9999px;
+    display: inline-block;
+    position: absolute;
+    margin-right: 32px;
+    right: 100%;
+}
+
+.row {
+    display: flex;
+
+    .col {
+        flex: 1 0 0;
+        padding: 0 32px;
+    }
 }
 
 header {
