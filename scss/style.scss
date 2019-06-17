@@ -13,6 +13,12 @@ body {
     line-height: 1.5;
 }
 
+.registries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .registry-link {
     border-radius: 8px;
     display: inline-flex;
@@ -66,6 +72,16 @@ h3 {
 h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+}
+
+.header-calligraphy {
+    width: 400px;
+    max-width: 100%;
 }
 
 .center {
@@ -166,6 +182,8 @@ header {
     @media only screen and (max-width: 640px) {
         justify-content: flex-start;
         height: auto;
+        position: static;
+        background: black;
 
         ul {
             li {
@@ -200,6 +218,23 @@ section {
     max-height: 800px;
     background-image: url("img/header-text.jpg");
     background-size: cover;
+    display: block;
+}
+
+.static-header-image {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) { 
+    .header-image {
+        display: none;
+    }
+    
+    .static-header-image {
+        display: block;
+        width: 100%;
+        max-height: 800px;
+    }
 }
 
 #story {
